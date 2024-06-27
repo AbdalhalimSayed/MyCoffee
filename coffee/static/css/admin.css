@@ -1,0 +1,20 @@
+#header, .module caption,#changelist-filter h2,
+input[type="submit"].default, 
+.submit-row input.default,.button,
+ input[type="submit"], 
+ input[type="button"], 
+.submit-row input, a.button,
+#id_permissions_selector_chosen h2{
+ 
+background-color: #5A020Cce;
+}
+div.breadcrumbs,
+.theme-toggle svg.theme-icon-when-auto,
+ .theme-toggle svg.theme-icon-when-dark,
+  .theme-toggle svg.theme-icon-when-light{
+    background-color: #5a020c7a;
+
+}
+#head{
+    color: wheat;
+}
