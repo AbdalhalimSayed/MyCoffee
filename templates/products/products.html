@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="my-form container p-5 my-5 rounded border border-warning">
+    <form>
+        <h2 class="text-center">All Products</h2>
+
+        <hr>
+
+        <section>
+            <div class="container-fluid">
+              <div class="row p-5" >
+                {% for pro in product %}
+                  <div>
+                    <div class="card m-2" style="width: 18rem;">
+                      <img src="{{pro.photo.url}}" class="card-img-top" style='height:250px' alt=" {{pro.name}} ">
+                      <div class="card-body">
+                        <h5 class="card-title"> {{pro.name}} </h5>
+                        <p class="card-text text-truncate"> {{pro.description}} </p>
+                        <p class="card-text">Current Price: <span id="price" class="bg-dark text-light rounded-circle p-2">$ {{pro.price}} </span></p>
+                        <a href=" {% url 'product' idProduct=pro.id %} " class="btn btn-warning">Show Details</a>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  
+                {% endfor %}
+              </div>
+            </div>
+        </section>
+    
+
+    </form>
+
+</div>
+{% endblock content %}
